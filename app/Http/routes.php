@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
+
+Route::get('/logos', 'LogoController@index');
+Route::post('/logo', 'LogoController@store');
+Route::delete('/logo/{logo}', 'LogoController@destroy');

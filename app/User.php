@@ -23,4 +23,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * Get all of the logos for the user.
+     */
+    public function logos()
+    {
+        return $this->hasMany(Logo::class);
+    }
 }
